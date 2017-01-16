@@ -11,3 +11,10 @@ for dimension in dimensions:
 
 # 4-13
 foods = ('fish', 'beef', 'milk', 'pizza', 'chicken')
+for food in foods:
+	print(food)
+
+# foods[0] = 'bird'
+foods = ('fish', 'beef', 'milk', 'mutton','pork')
+for food in foods:
+	print(food)
