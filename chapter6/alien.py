@@ -88,3 +88,32 @@ if 'erin' not in favorite_languages.keys():
 
 for name in sorted(favorite_languages.keys()):
     print(name.title() + ", thank you for taking the poll.")
+
+print("The following languages have been mentioned:")
+for language in favorite_languages.values():
+    print(language.title())
+
+for language in set(favorite_languages.values()):
+    print(language.title())
+
+# 6-5
+# key 必须唯一，否则只会显示最后一个key
+rivers = {'nile': 'egypt', 'yangtze': 'china', 'huanghe': 'china',
+          'lantsang': 'china', 'lantsang': 'Laos', 'lantsang': 'Viet Nam'}
+for river, country in rivers.items():
+    print("The " + river + " runs through " + country + ".")
+for river in set(rivers.keys()):
+    print(river)
+for country in set(rivers.values()):
+    print(country)
+
+# 6-6
+favorite_languages = {'jen': 'python', 'sarah': 'c',
+                      'edward': 'ruby', 'phil': 'python'}
+users = ['jen', 'sarah', 'coliton', 'tom']
+for user in users:
+    if user in favorite_languages:
+        print("Thank you, " + user + "!")
+    else:
+        print("Hi " + user + ", what is you favorite language?")
+
