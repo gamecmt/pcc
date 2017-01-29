@@ -9,3 +9,4 @@ restannurant.describe_restaurant()
 
 admin_user = Admin('chen', 'mid')
 admin_user.privileges.show_privileges()
+
