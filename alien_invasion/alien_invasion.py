@@ -1,16 +1,21 @@
 import sys
 import pygame
-import settings
+from settings import Settings
+from ship import Ship
 
 
 def run_game():
     pygame.init()
-    ai_settings=Settings()
-    screen = pygame.display.set_mode((ai_settings.screen_width,ai_settings.screen_height))
+    ai_settings = Settings()
+    screen = pygame.display.set_mode(
+        (ai_settings.screen_width, ai_settings.screen_height))
     pygame.display.set_caption("Alen Invasion")
 
+    # create a ship
+    ship =Ship(screen)
+    
     # set background color
-    bg_color = (230, 230, 230)
+    # bg_color = (230, 230, 230)
 
     while True:
         for event in pygame.event.get():
@@ -19,6 +24,8 @@ def run_game():
 
         # every loop refill screen
         screen.fill(ai_settings.bg_color)
+        ship.blitme()
+
         pygame.display.flip()
 
 run_game()
