@@ -1,10 +1,12 @@
 import sys
 import pygame
+import settings
 
 
 def run_game():
     pygame.init()
-    screen = pygame.display.set_mode((1200, 800))
+    ai_settings=Settings()
+    screen = pygame.display.set_mode((ai_settings.screen_width,ai_settings.screen_height))
     pygame.display.set_caption("Alen Invasion")
 
     # set background color
@@ -16,7 +18,7 @@ def run_game():
                 sys.exit()
 
         # every loop refill screen
-        screen.fill(bg_color)
+        screen.fill(ai_settings.bg_color)
         pygame.display.flip()
 
 run_game()
