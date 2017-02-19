@@ -1,7 +1,6 @@
 from random import choice
 
-
-class RandomWalk():
+class RandomWalk(object):
 
     def __init__(self, num_points=5000):
         self.num_points = num_points
@@ -24,5 +23,6 @@ class RandomWalk():
 
     def get_step(self):
         direction = choice([1, -1])
-        distance = choice([0, 1, 2, 3, 4])
-        step = direction * distance
+        distance = choice(range(0,5))
+        self.step = direction * distance
+        return self.step
